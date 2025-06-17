@@ -37,20 +37,32 @@
                 : false,
           }"
         >
-          <img :src="require(`@/assets/logos/${it.logo}`)" class="img-item" />
+          <img
+            :src="require(`@/assets/logos/${it.logo}`)"
+            class="img-item"
+            :ref="(el) => setImgRef(el, index, ind)"
+          />
         </div>
       </div>
     </div>
   </div>
 </template>
 <script setup>
-import { ref, defineProps, watch, defineExpose, defineEmits } from "vue";
+import {
+  ref,
+  defineProps,
+  watch,
+  defineExpose,
+  defineEmits,
+  onMounted,
+} from "vue";
 const showDetailInfo = ref(false);
 const currentTitleColor = ref(null);
 const currentContentColor = ref(null);
 const isShowDialog = ref(false);
 const dialogTop = ref(0);
 const dialogLeft = ref(0);
+const imgRefs = ref([]);
 const props = defineProps({
   showData: {
     type: Array,
@@ -72,15 +84,21 @@ const showCompanyInfo = (it, event) => {
   isShowDialog.value = true;
   showDetailInfo.value = it;
   const viewportWidth = window.innerWidth;
-  dialogTop.value =
-    event.currentTarget.getBoundingClientRect().top + window.screenY;
   const target = event.currentTarget;
   const rect = target.getBoundingClientRect();
-  if (rect.left + 360 > viewportWidth - 20) {
+  // 获取页面滚动偏移量
+  const scrollX = window.scrollX || window.pageXOffset;
+  const scrollY = window.scrollY || window.pageYOffset;
+  dialogTop.value =
+    event.currentTarget.getBoundingClientRect().top +
+    scrollY +
+    target.offsetHeight -
+    20;
+  if (rect.left + 380 > viewportWidth) {
     // 右侧空间不足，改到左侧
-    dialogLeft.value = rect.left - 340;
+    dialogLeft.value = rect.left + scrollX - 360 + target.offsetWidth;
   } else {
-    dialogLeft.value = rect.left + 100;
+    dialogLeft.value = rect.left + scrollX + target.offsetWidth;
   }
   emit(
     "handleClick",
@@ -90,6 +108,36 @@ const showCompanyInfo = (it, event) => {
     dialogLeft.value
   );
 };
+const setImgRef = (el, categoryIndex, ind) => {
+  if (!imgRefs.value[categoryIndex]) {
+    imgRefs.value[categoryIndex] = [];
+  }
+  if (el) {
+    imgRefs.value[categoryIndex][ind] = el;
+  }
+};
+const resizeImages = () => {
+  imgRefs.value.forEach((it) => {
+    if (!it) return;
+    it.forEach((img) => {
+      if (!img) return;
+      const containerWidth = 60;
+      const containerHeight = 20;
+      const imgWidth = img.naturalWidth;
+      const imgHeight = img.naturalHeight;
+      if (containerWidth / imgWidth > containerHeight / imgHeight) {
+        img.style.height = `${containerHeight}px`;
+        img.style.width = (containerHeight / imgHeight) * imgWidth + "px";
+      } else {
+        img.style.width = `${containerWidth}px`;
+        img.style.height = (containerWidth / imgWidth) * imgHeight + "px";
+      }
+    });
+  });
+};
+onMounted(() => {
+  resizeImages();
+});
 watch(
   () => props.listIndex,
   () => {
@@ -156,7 +204,7 @@ defineExpose({
 .container-content-box-show-item-content {
   padding: 20px;
   background: #fff;
-  height: 164px;
+  min-height: 164px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 48px);
@@ -167,22 +215,12 @@ defineExpose({
   width: 80px;
   height: 48px;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .img-show:hover {
   cursor: pointer;
-}
-.img-show:hover .img-item {
-  border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #fff;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
-}
-.img-item {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.img-item:hover {
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background: #fff;
