@@ -1,172 +1,230 @@
 <template>
   <FitScreen mode="full" :height="1080" :width="1920">
     <div class="container">
-      <div class="container-title">AI全景图</div>
+      <div class="container-title">
+        <span>AI行业生态全景图</span>
+        <div class="container-search">
+          <el-input
+            v-model="inputValue"
+            style="width: 200px,height: 36px,color: #333333"
+            size="large"
+            placeholder="搜索"
+            :suffix-icon="Search"
+            @change="handleSearch"
+          />
+        </div>
+      </div>
       <div class="container-content">
-        <div class="container-content-box">
-          <div class="container-content-box-title">
-            <!-- {{ data.landscape.category.name }} -->
-            <div class="zoom-controls">
-              <button class="zoom-btn" @click="zoomOut">缩小</button>
-              <button class="zoom-btn" @click="zoomIn">放大</button>
-            </div>
-          </div>
-          <div class="container-content-box-show">
-            <div
-              class="container-content-box-show-item"
-              :class="{
-                'container-content-box-show-item-last':
-                  index % 4 === 0 && index != 0,
-              }"
-              v-for="(item, index) in showData"
-              :key="index"
+        <div
+          class="container-content-box"
+          v-for="(item, index) in landscapeData"
+          :key="index"
+        >
+          <ContentShow
+            :showData="item"
+            :listIndex="index"
+            :searchData="searchData"
+            @handleClick="handleClick"
+            ref="contentShowRef"
+          />
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-left">
+          <div class="down-pdf footer-box" @click="handleDownloadPdf">
+            下载pdf
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
             >
-              <div class="container-content-box-show-item-title">
-                {{ item.name }}
-              </div>
-              <div class="container-content-box-show-item-content" :style="contentStyle">
-                <div
-                  class="img-show"
-                  v-for="(it, ind) in item.items"
-                  :key="ind"
-                  @click="showCompanyInfo(ind, index, it)"
-                >
-                  <img
-                    :src="require(`@/assets/logos/${it.logo}`)"
-                    class="img-item"
-                  />
-                  <div
-                    class="img-detail"
-                    v-if="currentIndex === ind && currentType === index"
-                  >
-                    <div class="img-detail-title">
-                      <img
-                        class="img-detail-title-img"
-                        :src="require(`@/assets/logos/${showDetailInfo?.logo}`)"
-                      />
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="28"
-                        height="28"
-                        viewBox="0 0 28 28"
-                        fill="none"
-                        class="img-close"
-                        @click="handleClose"
-                      >
-                        <path
-                          d="M7.63635 7.63635L20.3636 20.3636"
-                          stroke="#666666"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M20.3636 7.63635L7.63635 20.3636"
-                          stroke="#666666"
-                          stroke-width="2"
-                        />
-                      </svg>
-                    </div>
-                    <div class="img-detail-title-text">
-                      {{ showDetailInfo?.name }}
-                    </div>
-                    <div class="img-detail-title-country">中国</div>
-                    <div class="img-detail-title-desc">
-                      {{ showDetailInfo?.description }}
-                    </div>
-                    <div class="img-detail-bottom-desc">
-                      <div class="img-detail-bottom-desc-one">
-                        创立于<span class="img-detail-bottom-desc-span">{{
-                          handleTime()
-                        }}</span>
-                      </div>
-                      <div class="img-detail-bottom-desc-one">
-                        文本展示<span class="img-detail-bottom-desc-span"
-                          >xxx</span
-                        >
-                      </div>
-                      <div
-                        class="img-detail-bottom-desc-web"
-                        @click="pathStamp"
-                      >
-                        <span class="web-text">网站</span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                        >
-                          <path d="M15 9L14.9998 5H10.9998" stroke="black" />
-                          <path d="M15.091 5L11.2046 8.88642" stroke="black" />
-                          <path d="M8.33333 5H5V15H15V11.6667" stroke="black" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <path
+                d="M10 2.5V12.5"
+                stroke="black"
+                stroke-width="2"
+                class="feedback-path"
+              />
+              <path
+                d="M5 8.75L10 12.5L14.375 8.75"
+                stroke="black"
+                stroke-width="2"
+                class="feedback-path"
+              />
+              <path
+                d="M3.75 17.5H16.25"
+                stroke="black"
+                stroke-width="2"
+                class="feedback-path"
+              />
+            </svg>
+          </div>
+          <div class="feedback footer-box" @click="handleFeedback">
+            我要反馈
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path
+                d="M12 15L17 15"
+                stroke="black"
+                stroke-width="2"
+                class="feedback-path"
+              />
+              <path
+                d="M11.7143 3.82143C12.7202 2.81548 14.3512 2.81548 15.3571 3.82143V3.82143C16.3631 4.82738 16.3631 6.45834 15.3571 7.46429L7.8058 15.0156L3.82142 15.3571L4.16294 11.3728L11.7143 3.82143Z"
+                stroke="black"
+                stroke-width="2"
+                class="feedback-path"
+              />
+              <path
+                d="M8.9823 7.76794L12.018 10.8037"
+                stroke="black"
+                stroke-width="2"
+                class="feedback-path"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="footer-right">
+          <LogoSvg />
+          <div class="footer-logo-show" @click="handleClickGitHub">
+            <img src="@/assets/public/git-hub-logo.png" />
           </div>
         </div>
       </div>
     </div>
+    <teleport to="body">
+      <div
+        class="img-detail"
+        v-if="isShowDialog"
+        :style="{ top: dialogTop + 'px', left: dialogLeft + 'px' }"
+      >
+        <div class="img-detail-title">
+          <img
+            class="img-detail-title-img"
+            :src="require(`@/assets/logos/${showDetailInfo?.logo}`)"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            class="img-close"
+            @click="handleClose"
+          >
+            <path
+              d="M7.63635 7.63635L20.3636 20.3636"
+              stroke="#666666"
+              stroke-width="2"
+            />
+            <path
+              d="M20.3636 7.63635L7.63635 20.3636"
+              stroke="#666666"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+        <div class="img-detail-title-text">
+          {{ showDetailInfo?.name }}
+        </div>
+        <div class="img-detail-title-country">中国</div>
+        <div class="img-detail-title-desc">
+          {{ showDetailInfo?.description }}
+        </div>
+        <div class="img-detail-bottom-desc">
+          <div class="img-detail-bottom-desc-one">
+            创立于<span class="img-detail-bottom-desc-span">{{
+              handleTime()
+            }}</span>
+          </div>
+          <div class="img-detail-bottom-desc-one">
+            文本展示<span class="img-detail-bottom-desc-span">xxx</span>
+          </div>
+          <div class="img-detail-bottom-desc-web" @click="pathStamp">
+            <span class="web-text">网站</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <path d="M15 9L14.9998 5H10.9998" stroke="black" />
+              <path d="M15.091 5L11.2046 8.88642" stroke="black" />
+              <path d="M8.33333 5H5V15H15V11.6667" stroke="black" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </teleport>
   </FitScreen>
 </template>
 <script setup>
 import { ref, onMounted, computed } from "vue";
 import FitScreen from "@fit-screen/vue";
 import jsyaml from "js-yaml";
-const currentIndex = ref(null);
-const currentType = ref(null);
-const showDetailInfo = ref(false);
-const showData = ref([]);
+import ContentShow from "../components/ContentShow.vue";
+import LogoSvg from "../components/LogoSvg.vue";
+import { exportToPDF } from "../utlis/pdfExport";
+import { Search } from "@element-plus/icons-vue";
+
+const landscapeData = ref([]);
+const showDetailInfo = ref(null);
+const contentShowRef = ref(null);
+const isShowDialog = ref(false);
+const inputValue = ref("");
+const dialogTop = ref(0);
+const dialogLeft = ref(0);
+const searchData = ref([]);
 onMounted(async () => {
   const response = await fetch("/static/data.yaml");
   const yamlText = await response.text();
   const parsedData = jsyaml.load(yamlText);
-  console.log(parsedData);
-  showData.value = parsedData.landscape[0].subcategories;
+  landscapeData.value = parsedData?.landscape;
 });
-
-const showCompanyInfo = (ind, index, it) => {
-  currentIndex.value = ind;
-  currentType.value = index;
+const handleSearch = () => {
+  searchData.value = [];
+  if (!inputValue.value) return searchData.value;
+  landscapeData.value?.forEach((category) => {
+    category.subcategories.forEach((item) => {
+      item.items.forEach((it) => {
+        if (it.name.includes(inputValue.value)) {
+          searchData.value.push(it);
+        }
+      });
+    });
+  });
+};
+const handleTime = () => {
+  return showDetailInfo.value?.description?.split(" ")?.[1]?.split("-")?.[0];
+};
+const handleClick = (props, it, clientY, clientX) => {
+  isShowDialog.value = props;
   showDetailInfo.value = it;
+  dialogTop.value = clientY;
+  dialogLeft.value = clientX;
 };
 const handleClose = () => {
-  currentIndex.value = null;
-  currentType.value = null;
+  isShowDialog.value = false;
 };
 const pathStamp = () => {
   window.location.href = showDetailInfo.value?.homepage_url;
 };
-const handleTime = () => {
-  return showDetailInfo.value?.description?.split(" ")?.[1].split("-")?.[0];
+const handleFeedback = () => {
+  window.location.href = "https://github.com/openfusionx/FXView/issues";
 };
-
-const zoomFactor = ref(1);
-
-// 计算内容区域的缩放样式
-const contentStyle = computed(() => ({
-  transform: `scale(${zoomFactor.value})`,
-  transformOrigin: 'top left',
-  width: `${100 / zoomFactor.value}%`,
-  height: `${100 / zoomFactor.value}%`
-}));
-
-// 放大功能
-const zoomIn = () => {
-  if (zoomFactor.value < 1.5) {
-    zoomFactor.value += 0.1;
-  }
+const handleClickGitHub = () => {
+  window.location.href = "https://github.com/openfusionx/FXView";
 };
-
-// 缩小功能
-const zoomOut = () => {
-  if (zoomFactor.value > 0.7) {
-    zoomFactor.value -= 0.1;
-  }
+const handleDownloadPdf = () => {
+  exportToPDF("app", "landscape.pdf");
 };
-
 </script>
 <style scoped>
 .container {
@@ -188,9 +246,7 @@ const zoomOut = () => {
   width: 100%;
   height: 80px;
   flex-shrink: 0;
-  background: #fff;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
-  color: #000;
   font-family: "PingFang HK";
   font-size: 20px;
   font-style: normal;
@@ -200,85 +256,29 @@ const zoomOut = () => {
   padding-left: 42px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container-title span {
+  background: linear-gradient(90deg, #e94fd5 0%, #6358f2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container-search {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  margin-top: -18px;
+  z-index: 22;
+  -webkit-text-fill-color: none;
 }
 .container-content {
   width: 100%;
   padding: 20px;
 }
-.container-content-box-title {
-  width: 100%;
-  height: 60px;
-  flex-shrink: 0;
-  background: #fe8fb9;
-  padding-left: 40px;
-  display: flex;
-  align-items: center;
-  color: #000;
-  text-align: center;
-  font-family: "PingFang HK";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: 2px;
-}
-.container-content-box-show {
-  padding: 20px;
-  background: #fff0f6;
-  min-height: 200px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.container-content-box-show-item {
-  margin-right: 6px;
-  margin-top: 10px;
-  width: 362px;
-  box-sizing: border-box;
-}
-.container-content-box-show-item-last {
-  margin-right: 0px;
-}
-.container-content-box-show-item-title {
-  height: 40px;
-  flex-shrink: 0;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  background: #fff;
-  color: #000;
-  font-family: "PingFang HK";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.container-content-box-show-item-content {
-  padding: 20px;
-  background: #fff;
-  height: auto;
-  position: relative;
-  transition: trasform 0.3s ease;
-  display: flex;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-.img-show {
-  width: 80px;
-  height: 48px;
-  padding: 2px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.img-item {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.container-content-box {
+  margin-bottom: 20px;
 }
 .img-detail {
   width: 340px;
@@ -287,9 +287,7 @@ const zoomOut = () => {
   border: 1px solid #c2ccd9;
   background: #fff;
   position: absolute;
-  top: 0px;
-  left: 80px;
-  z-index: 1;
+  z-index: 99;
   padding: 20px;
 }
 .img-detail-title {
@@ -374,26 +372,57 @@ const zoomOut = () => {
   color: #d91b64;
   text-decoration-color: #d91b64;
 }
-
-.zoom-controls {
+.footer {
   display: flex;
-  gap: 10px;
-  margin-left: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 0 20px;
+  background: #f7f8fa;
+  box-shadow: 4px 0px 8px 0px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.footer-box {
+  display: flex;
+  padding: 6px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 4px;
+  border: 1px solid #d5d5d5;
+  /* border: 1px solid #df4a83; */
+  background: #fff;
+  width: 120px;
+  height: 34px;
+}
+.footer-box:hover {
+  cursor: pointer;
+  border: 1px solid #df4a83;
+  color: #d91b64;
+}
+.footer-box:hover :deep(.feedback-path) {
+  stroke: #d91b64;
+}
+.footer-left {
+  display: flex;
+}
+.footer-right {
+  display: flex;
+}
+.footer-logo-show:hover {
+  cursor: pointer;
+}
+.footer-logo-show img {
+  width: 40px;
+  height: 40px;
+}
+.down-pdf {
   margin-right: 20px;
 }
-
-.zoom-btn {
-  padding: 6px 12px;
-  background-color: #fe8fb9;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  font-size: 14px;
+:deep(.el-input__wrapper) {
+  border-radius: 30px !important;
 }
-
-.zoom-btn:hover {
-  background-color: #d91b64;
-}
-
 </style>

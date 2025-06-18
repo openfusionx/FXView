@@ -1,5 +1,5 @@
 landscape:
-  - name: Application应用层
+  - name: 应用层 Application
     subcategories:
       - name: 智慧金融
         items:
@@ -198,7 +198,7 @@ landscape:
             description: >-
               深睿致力于通过突破性的人工智能技术及自主研发的核心算法,为国内外医疗服务机构提供人工智能和互联网医疗解决方案。成立于2019年。
 
-  - name: Service服务层
+  - name: 服务层 Service
     subcategories:
       - name: 智能机器人无人机
         items:
