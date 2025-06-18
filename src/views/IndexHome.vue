@@ -140,7 +140,7 @@
         <div class="img-detail-bottom-desc">
           <div class="img-detail-bottom-desc-one">
             创立于<span class="img-detail-bottom-desc-span">{{
-              handleTime()
+              showDetailInfo?.founded_year
             }}</span>
           </div>
           <div class="img-detail-bottom-desc-one">

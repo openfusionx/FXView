@@ -5,7 +5,7 @@ from pypinyin import lazy_pinyin, Style
 # 定义 company 和 logos 文件夹路径
 company_dir = "company"
 logos_dir = "src/assets/logos"
-output_file = "generated_landscape.yml"
+output_file = "public/static/data.yaml"
 
 # 初始化 landscape 数据结构
 landscape_data = []
@@ -82,7 +82,8 @@ for filename in os.listdir(company_dir):
             "name": prefixed_company_name,
             "homepage_url": homepage_url,
             "logo": logo_filename if logo_filename else "",
-            "description": description
+            "description": description,
+            "founded_year": founded_year
         }
 
         # 添加 project 属性（仅当 display_size 是 “大”）
