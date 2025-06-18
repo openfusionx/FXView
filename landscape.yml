@@ -1,233 +1,746 @@
 landscape:
-  category:
-    name: Application应用层
-    subcategories:
-     subcategory:
-        name: 智慧金融
-        items:
-         item:
-            name: bd百度在线网络技术 (北京) 有限公司
-            homepage_url: https://www.baidu.com
-            logo: 百度.svg
-            description: >-
-              科技公司成立于 2000-01-18
+    - category:
+      name: Service服务层
+      subcategories:
+        - subcategory:
+          name: 智能机器人无人机
+          items:
+          - item:
+            name: jouav
+            homepage_url: https://www.jouav.com/zh/company
+            logo: jouav.svg
+            description: 科技公司，成立于 2010 年 4 月
             project: level1
-         item:
-            name: jd京东科技集团
-            homepage_url: https://www.jdt.com.cn/
-            logo: 京东科技.svg
-            description: >-
-              科技公司成立于 2012-09
+          - item:
+            name: ehang
+            homepage_url: https://www.ehang.com/cn
+            logo: ehang.svg
+            description: 科技公司，成立于 2014年4月
             project: level1
-         item:
-            name: my蚂蚁科技集团股份有限公司
-            homepage_url: https://www.antgroup.com/
-            logo: 蚂蚁.svg
-            description: >-
-              科技公司成立于 2000-10-19
+          - item:
+            name: dj大疆
+            homepage_url: https://www.dji.com/cn
+            logo: 大疆.svg
+            description: 科技公司，成立于 2006年
             project: level1
-         item:
-            name: tx腾讯云计算（北京）有限责任公司
+          - item:
+            name: ql擎朗
+            homepage_url: https://www.keenon.com/cn/
+            logo: 擎朗.svg
+            description: 科技公司，成立于 2010年
+          - item:
+            name: fmt福玛特
+            homepage_url: https://www.fmart.com.cn/
+            logo: 福玛特.svg
+            description: 科技公司，成立于 2020年02月28日
+        - subcategory:
+          name: 数字人
+          items:
+          - item:
+            name: sykj世优科技
+            homepage_url: https://4uavatar.com/
+            logo: 世优科技.svg
+            description: 科技公司，成立于 2015年
+            project: level1
+          - item:
+            name: yy有言
+            homepage_url: https://www.youyan3d.com/
+            logo: 有言.svg
+            description: 科技公司，成立于 2018年10月29日
+            project: level1
+          - item:
+            name: xb小冰
+            homepage_url: https://xiaoice.com/
+            logo: 小冰.svg
+            description: 科技公司，成立于 2013年12月
+        - subcategory:
+          name: 智能驾驶
+          items:
+          - item:
+            name: tsl特斯拉
+            homepage_url: https://www.tesla.cn/
+            logo: 特斯拉.svg
+            description: 科技公司，成立于 2003年7月1日
+            project: level1
+          - item:
+            name: apollo
+            homepage_url: https://www.apollo.auto/apollo-self-driving
+            logo: apollo.svg
+            description: 科技公司，成立于 2017年7月
+            project: level1
+          - item:
+            name: wl蔚来
+            homepage_url: https://www.nio.cn/
+            logo: 蔚来.svg
+            description: 科技公司，成立于 2014年11月
+            project: level2
+          - item:
+            name: lx理想
+            homepage_url: https://www.lixiang.com/
+            logo: 理想.svg
+            description: 科技公司，成立于 2015年7月
+            project: level2
+          - item:
+            name: dsxw德赛西威
+            homepage_url: https://www.desaysv.com/
+            logo: 德赛西威.svg
+            description: 科技公司，成立于 1986年07月24日
+            project: level3
+          - item:
+            name: autox
+            homepage_url: http://autox.tech
+            logo: autox.svg
+            description: 科技公司，成立于 2016年9月
+          - item:
+            name: jsdz均胜电子
+            homepage_url: https://www.joyson.com/
+            logo: 均胜电子.svg
+            description: 科技公司，成立于 2004年
+        - subcategory:
+          name: 智能服务
+          items:
+          - item:
+            name: BigModel
+            homepage_url: https://open.bigmodel.cn/
+            logo: BigModel.svg
+            description: 科技公司，成立于 2012年
+            project: level1
+          - item:
+            name: gjld硅基流动
+            homepage_url: https://siliconflow.cn/
+            logo: 硅基流动.svg
+            description: 科技公司，成立于 2023年8月29日
+            project: level1
+          - item:
+            name: txy腾讯云
             homepage_url: https://cloud.tencent.com/
             logo: 腾讯云.svg
-            description: >-
-              科技公司成立于 2010-10-21
+            description: 科技公司，成立于 2013年9月
             project: level1
-         item:
-            name: kd科大讯飞股份有限公司
-            homepage_url: https://www.iflytek.com
-            logo: 科大讯飞.svg
-            description: >-
-              科技公司成立于 1999-12-30
+          - item:
+            name: mdsq魔搭社区
+            homepage_url: https://www.modelscope.cn/home
+            logo: 魔搭社区.svg
+            description: 科技公司，成立于 2022年
+            project: level1
+          - item:
+            name: yx言犀
+            homepage_url: https://yanxi.jd.com/
+            logo: 言犀.svg
+            description: 科技公司，成立于 2023年06月12日
+          - item:
+            name: hsyq火山引擎
+            homepage_url: https://www.volcengine.com/
+            logo: 火山引擎.svg
+            description: 科技公司，成立于 2020年5月
+        - subcategory:
+          name: 智能终端设备
+          items:
+          - item:
+            name: hs华硕
+            homepage_url: https://w3.asus.com.cn/
+            logo: 华硕.svg
+            description: 科技公司，成立于 1989年4月2日
+            project: level1
+          - item:
+            name: lx联想
+            homepage_url: https://brand.lenovo.com.cn/
+            logo: 联想.svg
+            description: 科技公司，成立于 1984年
+            project: level1
+          - item:
+            name: hp惠普
+            homepage_url: https://www.hp.com/
+            logo: 惠普.svg
+            description: 科技公司，成立于 1939年
             project: level2
-         item:
-            name: hs恒生电子股份有限公司
+          - item:
+            name: jxgm机械革命
+            homepage_url: https://www.mechrevo.com/
+            logo: 机械革命.svg
+            description: 科技公司，成立于 2014年
+          - item:
+            name: de戴尔
+            homepage_url: https://www.dell.com/zh-cn
+            logo: 戴尔.svg
+            description: 科技公司，成立于 1984年
+    - category:
+      name: Technology技术层
+      subcategories:
+        - subcategory:
+          name: 混合智能
+          items:
+          - item:
+            name: shkpl上海开普勒机器人有限公司
+            homepage_url: https://www.gotokepler.com/
+            logo: 开普勒机器人.svg
+            description: 上海开普勒机器人有限公司是一家专注于通用人形机器人研发、生产及应用生态的高科技创新企业。，成立于 2023
+            project: level1
+          - item:
+            name: dtjqr达闼机器人股份有限公司
+            homepage_url: https://www.dataarobotics.com/
+            logo: 达闼机器人.svg
+            description: 达闼,是一家云端智能机器人运营商.达闼正为各行业客户提供专业的机器人运营服务，成立于 2018
+            project: level1
+          - item:
+            name: yskj宇树科技
+            homepage_url: https://www.unitree.com/
+            logo: 宇树科技.svg
+            description: 杭州宇树科技是一家世界知名的民用机器人公司, 专注于消费级、行业级高性能通用足式/人形机器人及灵巧机械臂的自主研发、生产和销售。，成立于 2016
+            project: level1
+          - item:
+            name: zqjqr众擎机器人
+            homepage_url: https://engineai.com.cn/
+            logo: 众擎机器人.svg
+            description: 深圳市众擎机器人科技有限公司专注于通用智能机器人及行业场景方案，包括人形机器人和其它相关产品的研发生产。，成立于 2023
+            project: level1
+          - item:
+            name: xdjy星动纪元
+            homepage_url: https://www.robotera.com/
+            logo: 星动纪元.svg
+            description: 是一家由清华大学交叉信息研究院孵化，研发具身智能以及通用人形机器人技术和产品的新兴科技公司。，成立于 2023
+            project: level1
+          - item:
+            name: flyzn傅利叶智能
+            homepage_url: https://www.fftai.cn/
+            logo: 傅利叶智能.svg
+            description: 傅利叶智能，是一家主要从事智能机器人技术领域的有限责任公司，经营范围包括智能科技领域内的技术开发、技术服务、技术咨询、技术转让等。，成立于 2015
+            project: level1
+          - item:
+            name: shzyx上海智元新创技术有限公司
+            homepage_url: https://zhiyuan-robot.com/
+            logo: 智元.svg
+            description: 是一家致力于以A1+机器人的融合创新、打造世界级领先的具身智能机器人产品及应用生态的创新企业。，成立于 2023
+            project: level1
+        - subcategory:
+          name: 大模型
+          items:
+          - item:
+            name: bjbcz北京百川智能科技有限公司
+            homepage_url: https://www.baichuan-ai.com
+            logo: 百川智能科技有限公司.svg
+            description: 百川智能，是王小川和茹立云联合创立的一家研发并提供通用人工智能服务的中国公司，旨在打造中国版的 OpenAI 基础大模型及颠覆性上层应用。，成立于 2023-03
+            project: level1
+          - item:
+            name: hwpgd华为盘古大模型
+            homepage_url: https://www.huawei.com
+            logo: 华为.svg
+            description: 华为创立于1987年，是全球领先的ICT（信息与通信）基础设施和智能终端提供商。，成立于 1987
+            project: level1
+          - item:
+            name: altyd阿里通义大模型
+            homepage_url: https://www.aliyun.com/
+            logo: 阿里通义大模型.svg
+            description: 阿里云—阿里巴巴集团旗下公司，是全球领先的云计算及人工智能科技公司。提供云服务器、云数据库、云安全、云存储、企业应用及行业解决方案服务。，成立于 2009
+            project: level1
+          - item:
+            name: txybd腾讯元宝大模型
+            homepage_url: https://cloud.tencent.com/
+            logo: 腾讯元宝大模型.svg
+            description: 腾讯云是腾讯公司旗下的云计算品牌，致力于为全球的政府机构、企业组织和个人开发者提供领先的云计算、大数据和人工智能等技术产品与服务。，成立于 2010-10-21
+            project: level1
+          - item:
+            name: klwwk昆仑万维科技股份有限公司
+            homepage_url: https://www.kunlun.com
+            logo: 昆仑.svg
+            description: 昆仑万维是一家成立于2008年的人工智能科技公司，旗下业务涵盖AGI与AIGC、信息分发、元宇宙、社交娱乐及游戏等多个领域，市场遍及全球。，成立于 2008
+            project: level1
+          - item:
+            name: Anthropic
+            homepage_url: https://www.anthropic.com
+            logo: Anthropic Claude大模型.svg
+            description: Anthropic是一家位于美国加州旧金山的人工智能股份有限公司，成立于2021年是,一家人工智能安全和研究公司，致力于构建可靠、可解释和可操纵的AI系统。，成立于 2021
+            project: level1
+          - item:
+            name: bjzph北京智谱华章科技股份有限公司
+            homepage_url: https://www.zhipuai.cn
+            logo: 智谱.svg
+            description: 北京智谱华章科技股份有限公司（简称“智谱”）致力于打造新一代认知智能大模型，专注于做大模型的中国创新。，成立于 2019
+            project: level1
+          - item:
+            name: hzsdq杭州深度求索人工智能基础技术研究有限公司
+            homepage_url: https://www.deepseek.com
+            logo: 深度求索.svg
+            description: DeepSeek是杭州深度求索人工智能基础技术研究有限公司推出的AI助手，免费体验与全球领先AI模型的互动交流，于2025年1月15日正式上线。，成立于 2023-07
+            project: level1
+          - item:
+            name: zjdbd字节豆包大模型
+            homepage_url: https://www.bytedance.com
+            logo: 豆包.svg
+            description: 字节跳动是一家以短视频为核心的全球互联网技术公司，旗下拥有抖音、TikTok、头条、西瓜视频等多个知名品牌。，成立于 2012
+            project: level1
+          - item:
+            name: Open AI
+            homepage_url: https://www.openai.com
+            logo: Open AI.svg
+            description: OpenAI，是一家开放人工智能研究和部署公司，其使命是确保通用人工智能造福全人类。创立于2015年12月，总部位于美国旧金山。，成立于 2015
+            project: level1
+          - item:
+            name: Meta LLaMa
+            homepage_url: https://www.llama.com
+            logo: Meta LLaMa.svg
+            description: Meta公司（Meta Platform Inc.），原名Facebook，是美国一家互联网科技公司，由马克·扎克伯格创立于2004年2月4日，主要经营社交网络、虚拟现实、元宇宙等产品。，成立于 2004
+            project: level1
+          - item:
+            name: Grok
+            homepage_url: https://grok.online/zh/
+            logo: Grok大模型.svg
+            description: 美国xAI公司发布的AI模型，成立于 2024
+            project: level1
+          - item:
+            name: bdwxd百度文心大模型
+            homepage_url: https://www.baidu.com
+            logo: 百度文心大模型.svg
+            description: 百度是一家领先的互联网公司，成立于2000年，经过近20年的发展，百度已从单一的搜索引擎服务商成功转型为一个融合内容生态与人工智能（AI）的综合性互联网公司。，成立于 2000-01-18
+            project: level1
+          - item:
+            name: gggs谷歌公司
+            homepage_url: https://www.google.com
+            logo: 谷歌.svg
+            description: 谷歌公司（Google Inc.）成立于1998年9月4日，是美国乃至全球科技行业龙头，是全球最大的搜索引擎公司、Android系统开发商、全球无人驾驶技术及虚拟现实技术领导者、量子计算机开发公司等。，成立于 1998
+            project: level1
+          - item:
+            name: jdyxd京东言犀大模型
+            homepage_url: https://www.jdt.com.cn/
+            logo: 言犀.svg
+            description: 京东科技集团是京东集团旗下专注于以技术为产业服务的业务子集团，致力于为企业、金融机构、政府等各类客户提供全价值链的技术性产品与解决方案。，成立于 2013
+            project: level1
+          - item:
+            name: kdxfx科大讯飞星火大模型
+            homepage_url: https://www.iflytek.com
+            logo: 讯飞.svg
+            description: 科大讯飞股份有限公司成立于1999年，是一家专注于智能语音和人工智能技术的国家级骨干软件企业，致力于推动人工智能的研发和产业化。，成立于 1999-12-30
+            project: level2
+    - category:
+      name: Infrastructure基础设施层
+      subcategories:
+        - subcategory:
+          name: 操作系统
+          items:
+          - item:
+            name: wr微软
+            homepage_url: https://www.microsoft.com
+            logo: 微软.svg
+            description: 微软是一家跨国科技企业，主营业务包括通过软件和服务帮助用户实现信息交流和数字生活管理，提供Windows平台、服务器和工具，提供商业解决方案，开发新的数字化家用技术和娱乐方式，进行产品研发等。，成立于 1975
+            project: level1
+          - item:
+            name: pg苹果iOS
+            homepage_url: https://www.apple.com
+            logo: 苹果.svg
+            description: 苹果公司（Apple Inc.），是美国的一家跨国科技公司。，成立于 1976
+            project: level1
+          - item:
+            name: gggs谷歌公司
+            homepage_url: https://www.google.com
+            logo: 谷歌.svg
+            description: 谷歌公司（Google Inc.）成立于1998年9月4日，是美国乃至全球科技行业龙头，是全球最大的搜索引擎公司、Android系统开发商、全球无人驾驶技术及虚拟现实技术领导者、量子计算机开发公司等。，成立于 1998
+            project: level1
+          - item:
+            name: zkfd中科方德
+            homepage_url: https://www.nfschina.com/
+            logo: 中科方德.svg
+            description: 中科方德软件有限公司是国产操作系统核心厂商之一、国家重点软件企业。，成立于 2006
+            project: level1
+          - item:
+            name: tx统信UOS
+            homepage_url: https://www.uniontech.com/
+            logo: 统信UOS.svg
+            description: 统信软件技术有限公司致力于研发安全稳定、智能易用的中国操作系统及基础架构产品与服务，以操作系统为核心，引领中国软硬件生态建设。，成立于 2019
+            project: level1
+          - item:
+            name: pg苹果
+            homepage_url: https://www.apple.com
+            logo: 苹果.svg
+            description: 苹果公司（Apple Inc.），是美国的一家跨国科技公司。，成立于 1976
+            project: level1
+        - subcategory:
+          name: 算力平台
+          items:
+          - item:
+            name: AWS
+            homepage_url: https://www.aws.amazon.com
+            logo: AWS.svg
+            description: 亚马逊云科技为全球客户提供以云服务器、云存储、数据库、机器学习为主的基础设施和云解决方案,，成立于 2006
+            project: level1
+          - item:
+            name: bdy百度云
+            homepage_url: https://www.baidu.com
+            logo: 百度云.svg
+            description: 百度是一家领先的互联网公司，成立于2000年，经过近20年的发展，百度已从单一的搜索引擎服务商成功转型为一个融合内容生态与人工智能（AI）的综合性互联网公司。，成立于 2000-01-18
+            project: level1
+          - item:
+            name: txyjs腾讯云计算（北京）有限责任公司
+            homepage_url: https://cloud.tencent.com/
+            logo: 腾讯云.svg
+            description: 腾讯云是腾讯公司旗下的云计算品牌，致力于为全球的政府机构、企业组织和个人开发者提供领先的云计算、大数据和人工智能等技术产品与服务。，成立于 2010-10-21
+            project: level1
+          - item:
+            name: gggs谷歌公司
+            homepage_url: https://www.google.com
+            logo: 谷歌.svg
+            description: 谷歌公司（Google Inc.）成立于1998年9月4日，是美国乃至全球科技行业龙头，是全球最大的搜索引擎公司、Android系统开发商、全球无人驾驶技术及虚拟现实技术领导者、量子计算机开发公司等。，成立于 1998
+            project: level1
+          - item:
+            name: wr微软Azure
+            homepage_url: https://www.microsoft.com
+            logo: 微软.svg
+            description: 微软是一家跨国科技企业，主营业务包括通过软件和服务帮助用户实现信息交流和数字生活管理，提供Windows平台、服务器和工具，提供商业解决方案，开发新的数字化家用技术和娱乐方式，进行产品研发等。，成立于 1975
+            project: level1
+          - item:
+            name: jdy京东云
+            homepage_url: https://www.jdt.com.cn/
+            logo: 京东云.svg
+            description: 京东科技集团是京东集团旗下专注于以技术为产业服务的业务子集团，致力于为企业、金融机构、政府等各类客户提供全价值链的技术性产品与解决方案。，成立于 2013
+            project: level1
+          - item:
+            name: aly阿里云
+            homepage_url: https://www.aliyun.com/
+            logo: 阿里云.svg
+            description: 阿里云—阿里巴巴集团旗下公司，是全球领先的云计算及人工智能科技公司。提供云服务器、云数据库、云安全、云存储、企业应用及行业解决方案服务。，成立于 2009
+            project: level1
+          - item:
+            name: jsy金山云
+            homepage_url: https://www.ksyun.com/
+            logo: 金山云.svg
+            description: 北京金山云网络技术有限公司是金山软件旗下云计算企业，致力于为企业、金融机构、政府等各类客户提供全价值链的技术性产品与解决方案。，成立于 2012
+            project: level1
+          - item:
+            name: hw华为
+            homepage_url: https://www.huawei.com
+            logo: 华为.svg
+            description: 华为创立于1987年，是全球领先的ICT（信息与通信）基础设施和智能终端提供商。，成立于 1987
+            project: level1
+        - subcategory:
+          name: 芯片
+          items:
+          - item:
+            name: hw华为
+            homepage_url: https://www.huawei.com
+            logo: 华为.svg
+            description: 华为创立于1987年，是全球领先的ICT（信息与通信）基础设施和智能终端提供商。，成立于 1987
+            project: level1
+          - item:
+            name: sykj燧原科技
+            homepage_url: https://www.enflame-tech.com/
+            logo: 燧原.svg
+            description: 燧原科技专注人工智能领域云端算力平台，致力为人工智能产业发展提供普惠的基础设施解决方案，提供自主知识产权的高算力、高能效比、可编程的通用人工智能训练和推理产品。，成立于 2018
+            project: level1
+          - item:
+            name: yte英特尔
+            homepage_url: https://www.intel.com
+            logo: 英特尔.svg
+            description: 英特尔是半导体行业和计算创新领域的全球领先厂商，推动人工智能、5G、智能边缘等转折性技术的创新和应用突破，驱动智能互联世界。，成立于 1968
+            project: level1
+          - item:
+            name: sx三星
+            homepage_url: https://www.samsung.com
+            logo: 三星.svg
+            description: 三星集团是来自韩国的跨国企业，业务涉及电子、金融、机械、化学等众多领域。，成立于 1938
+            project: level1
+          - item:
+            name: mexc摩尔线程
+            homepage_url: https://www.mthreads.com/
+            logo: 摩尔线程.svg
+            description: 是一家以从事软件和信息技术服务业为主的企业 ，依托自主创新的GPU知识产权，研发设计全功能高性能国产GPU芯片及相关产品，成立于 2020
+            project: level1
+          - item:
+            name: brkj壁仞科技
+            homepage_url: https://www.birentech.com/
+            logo: 壁仞.svg
+            description: 壁仞科技是一家专注于原创性的通用计算体系的研发商，提供高性能GPU软硬件和智能计算解决方案。，成立于 2019
+            project: level1
+          - item:
+            name: NVIDIA
+            homepage_url: https://www.nvidia.com
+            logo: NVIDIA.svg
+            description: 成立于1993年，是一家美国跨国科技公司，致力于开发CPU、DPU、GPU和AI软件，为建筑工程、金融服务、科学研究、制造业、汽车等领域的计算解决方案提供支持。，成立于 1993
+            project: level1
+          - item:
+            name: gt高通
+            homepage_url: https://www.qualcomm.com
+            logo: 高通.svg
+            description: 创立于1985年，总部设于美国加利福尼亚州圣迭戈市，是全球领先的无线科技创新者。，成立于 1985
+            project: level1
+          - item:
+            name: AMD
+            homepage_url: https://www.amd.com
+            logo: AMD.svg
+            description: 成立于1969年，是一家美国半导体跨国公司，公司致力于开发设计集成电路产品，主要产品包括中央处理器、图形处理器、主板芯片组等，为游戏、人工智能、云计算等领域提供计算解决方案。，成立于 1969
+            project: level1
+          - item:
+            name: hwj寒武纪
+            homepage_url: https://www.cambricon.com/
+            logo: 寒武纪.svg
+            description: 是一家专注于人工智能芯片产品的研发与技术创新、致力于打造人工智能领域的核心处理器芯片的企业，成立于 2016
+            project: level1
+        - subcategory:
+          name: 开发运营框架
+          items:
+          - item:
+            name: Databricks
+            homepage_url: https://www.databricks.com
+            logo: Databricks.svg
+            description: Databricks，由美国加州大学伯克利 AMP 实验室的 Spark 大数据处理系统多位创始人联合创立。Databricks 致力于提供基于 Spark 的云服务，可用于数据集成，数据管道等任务。，成立于 2013
+            project: level1
+          - item:
+            name: Meta Caffe2
+            homepage_url: https://www.llama.com
+            logo: Caffe2.svg
+            description: Meta公司（Meta Platform Inc.），原名Facebook，是美国一家互联网科技公司，由马克·扎克伯格创立于2004年2月4日，主要经营社交网络、虚拟现实、元宇宙等产品。，成立于 2004
+            project: level1
+          - item:
+            name: kskj旷视科技
+            homepage_url: https://www.megvii.com/
+            logo: 旷视.svg
+            description: 旷视科技创立于2011年，是一个人工智能产品和解决方案品牌。，成立于 2011
+            project: level1
+          - item:
+            name: hwpgd华为盘古大模型
+            homepage_url: https://www.huawei.com
+            logo: 华为.svg
+            description: 华为创立于1987年，是全球领先的ICT（信息与通信）基础设施和智能终端提供商。，成立于 1987
+            project: level1
+          - item:
+            name: gggs谷歌公司
+            homepage_url: https://www.google.com
+            logo: 谷歌.svg
+            description: 谷歌公司（Google Inc.）成立于1998年9月4日，是美国乃至全球科技行业龙头，是全球最大的搜索引擎公司、Android系统开发商、全球无人驾驶技术及虚拟现实技术领导者、量子计算机开发公司等。，成立于 1998
+            project: level1
+          - item:
+            name: bdzxw百度在线网络技术 (北京) 有限公司
+            homepage_url: https://www.baidu.com
+            logo: 百度.svg
+            description: 百度是一家领先的互联网公司，成立于2000年，经过近20年的发展，百度已从单一的搜索引擎服务商成功转型为一个融合内容生态与人工智能（AI）的综合性互联网公司。，成立于 2000-01-18
+            project: level1
+    - category:
+      name: Application应用层
+      subcategories:
+        - subcategory:
+          name: 智慧金融
+          items:
+          - item:
+            name: jdkjj京东科技集团
+            homepage_url: https://www.jdt.com.cn/
+            logo: 京东科技.svg
+            description: 京东科技成立于2012年，总部位于北京市，是一家以AI驱动产业数字化的科技公司，致力于为企业、金融机构和政府提供全价值链的技术产品与解决方案。，成立于 2012-09
+            project: level1
+          - item:
+            name: txyjs腾讯云计算（北京）有限责任公司
+            homepage_url: https://cloud.tencent.com/
+            logo: 腾讯云.svg
+            description: 腾讯云是腾讯公司旗下的云计算品牌，致力于为全球的政府机构、企业组织和个人开发者提供领先的云计算、大数据和人工智能等技术产品与服务。，成立于 2010-10-21
+            project: level1
+          - item:
+            name: mykjj蚂蚁科技集团股份有限公司
+            homepage_url: https://www.antgroup.com/
+            logo: 蚂蚁.svg
+            description: 蚂蚁集团起步于2004年诞生的支付宝，经过二十年的发展，已成为世界领先的互联网开放平台。，成立于 2000-10-19
+            project: level1
+          - item:
+            name: bdzxw百度在线网络技术 (北京) 有限公司
+            homepage_url: https://www.baidu.com
+            logo: 百度.svg
+            description: 科技公司，成立于 2000-01-18
+            project: level1
+          - item:
+            name: hsdzg恒生电子股份有限公司
             homepage_url: https://www.hundsun.com
             logo: 恒生电子.svg
-            description: >-
-              科技公司成立于 2000-12-13
+            description: 恒生电子股份有限公司是一家专注于金融IT服务的高新技术企业，成立于1997年，总部位于中国杭州。，成立于 2000-12-13
             project: level2
-         item:
-            name: br百融云创科技股份有限公司
-            homepage_url: https://www.brgroup.com
-            logo: 百融.svg
-            description: >-
-              科技公司成立于 2014-03-19
-            project: level3
-         item:
-            name: sh上海冰鉴信息科技有限公司
-            homepage_url: https://www.icekredit.com
-            logo: 冰鉴.svg
-            description: >-
-              科技公司成立于 2015-06-04
-            project: level3
-         item:
-            name: ds第四范式 (北京) 技术有限公司
+          - item:
+            name: kdxfg科大讯飞股份有限公司
+            homepage_url: https://www.iflytek.com
+            logo: 讯飞.svg
+            description: 科大讯飞股份有限公司成立于1999年，是一家专注于智能语音和人工智能技术的国家级骨干软件企业，致力于推动人工智能的研发和产业化。，成立于 1999-12-30
+            project: level2
+          - item:
+            name: dsfsb第四范式 (北京) 技术有限公司
             homepage_url: https://www.4paradigm.com
             logo: 第四范式.svg
-            description: >-
-              科技公司成立于 2015-05-12
+            description: 第四范式成立于2014年，是一家人工智能技术与服务提供商，业务是利用机器学习技术和经验，通过对数据进行精准预测与挖掘，揭示出数据背后的规律。，成立于 2015-05-12
             project: level3
-         item:
-            name: td同盾科技有限公司
+          - item:
+            name: bryck百融云创科技股份有限公司
+            homepage_url: https://www.brgroup.com
+            logo: 百融.svg
+            description: 科技公司，成立于 2014-03-19
+            project: level3
+          - item:
+            name: tdkjy同盾科技有限公司
             homepage_url: https://www.tongdun.cn
             logo: 同盾科技.svg
-            description: >-
-              科技公司成立于 2012-10-10
+            description: 同盾科技是中国领先的人工智能科技企业，专注决策智能领域，致力于帮助政企客户防范风险、提升决策效率。，成立于 2012-10-10
             project: level3
-         item:
-            name: dg达而观信息科技（上海）有限公司
+          - item:
+            name: shbjx上海冰鉴信息科技有限公司
+            homepage_url: https://www.icekredit.com
+            logo: 冰鉴.svg
+            description: 冰鉴科技成立于2015年,是一家利用人工智能技术提供企业级服务的高科技公司。，成立于 2015-06-04
+            project: level3
+          - item:
+            name: degxx达而观信息科技（上海）有限公司
             homepage_url: https://www.datagrand.com/
-            logo: 达观.svg
-            description: >-
-              科技公司成立于 2015-05-28
-     subcategory:
-        name: 智慧教育
-        items:
-         item:
-            name: kdxf科大讯飞教育
-            homepage_url: https://www.iflytek.com
-            logo: 讯飞教育.svg
-            description: >-
-              以“人工智能助力教育，因材施教成就梦想”为理念，围绕“因材施教”提供了覆盖教、学、考、评、管的教育全场景解决方案。成立于2004年。
+            logo: 达而观.svg
+            description: 达观数据是一家专注于智能文本处理技术的企业，为企业提供各类场景智能文本处理产品 [43]。是行业首家国家级专精特新“小巨人”企业。，成立于 2015-05-28
+        - subcategory:
+          name: 智慧医疗
+          items:
+          - item:
+            name: ydkjy医渡科技有限公司
+            homepage_url: https://www.yidu-tech.com
+            logo: 医渡科技有限公司.svg
+            description: 医渡科技有限公司是一家专注于医疗大数据与人工智能应用的高科技企业，成立于2014年。公司以自主研发的YIDUCORE平台为核心，推动医疗数据智能化和精准医疗发展。，成立于 2014年
             project: level1
-         item:
-            name: yfd猿辅导
-            homepage_url: https://www.yuanfudao.com
-            logo: 猿辅导.svg
-            description: >-
-              猿辅导（Yuanfudao）是一家中国领先的人工智能驱动的在线教育科技公司，成立于2012年，总部位于北京。​公司致力于将人工智能技术应用于教育领域，提供个性化、智能化的学习体验。成立于2012年。
+          - item:
+            name: xfylk讯飞医疗科技有限公司
+            homepage_url: https://www.iflytek.com
+            logo: 讯飞.svg
+            description: 讯飞医疗科技有限公司是科大讯飞集团旗下专注于医疗人工智能的子公司，致力于通过AI技术推动医疗智能化，提供覆盖诊疗、管理、健康服务的全场景智能医疗解决方案。，成立于 1999年
             project: level2
-         item:
-            name: lls流利说
-            homepage_url: https://www.yuanfudao.com
-            logo: 流利说.svg
-            description: >-
-              流利说（LAIX）是一家领先的人工智能驱动的教育科技公司，成立于2012年，总部位于中国上海。成立于2012年。
-         item:
-            name: 松鼠AI
-            homepage_url: https://www.vipkid.com.cn/
-            logo: 松鼠AI.svg
-            description: >-
-              松鼠AI（Squirrel AI）是一家专注于人工智能教育技术的科技公司
-         item:
-            name: VIPKID
-            homepage_url: https://www.vipkid.com.cn/
-            logo: VIPKID.svg
-            description: >-
-              以“赋能教育，启迪未来”为使命，致力于实现“让孩子自由的行走于这个星球”的愿景。VIPKID通过结合教育、科技和服务，打造了覆盖全球、满足不同年龄段和地区需求的终身学习产品生态圈。成立于2013年10月。
-     subcategory:
-        name: 智慧政府
-        items:
-         item:
-            name: bjsz北京数字政通科技股份
-            homepage_url: https://www.egova.com.cn/
-            logo: 北京数字政通科技股份logo.svg
-            description: >-
-              科技公司。成立于2010年。
-         item:
-            name: bjhy北京华宇软件股份有限公司
-            homepage_url: https://www.thunisoft.com/
-            logo: 北京华宇软件股份有限公司logo.svg
-            description: >-
-              科技公司。成立于2001年。
-         item:
-            name: gtxd国泰新点软件股份有限公司
-            homepage_url: https://www.epoint.com.cn/eweb/
-            logo: 国泰新点软件股份有限公司logo.svg
-            description: >-
-              科技公司。成立于1998年。
-         item:
-            name: szytl深圳云天励飞技术股份有限公司
-            homepage_url: https://www.intellif.com/
-            logo: 深圳云天励飞技术股份有限公司logo.svg
-            description: >-
-              科技公司。成立于2014年。
-         item:
-            name: xhxx星环信息科技股份有限公司
-            homepage_url: https://www.transwarp.cn/
-            logo: 星环信息科技股份有限公司logo.svg
-            description: >-
-              科技公司。成立于2013年。
-         item:
-            name: yckj云从科技集团股份有限公司
-            homepage_url: https://www.cloudwalk.com/About#intro
-            logo: 云从科技集团股份有限公司logo.svg
-            description: >-
-              科技公司。成立于2015年。
-     subcategory:
-        name: 智慧交通
-        items:
-         item:
-            name: lcy浪潮云信息技术股份公司
+          - item:
+            name: skkjy数坤科技有限公司
+            homepage_url: https://www.shukun.com
+            logo: 数坤科技有限公司.svg
+            description: 数坤科技有限公司是一家专注于AI医疗影像的高科技企业，成立于2017年。公司以自主研发的“数字人体”平台为核心，推动医学影像智能化，助力医生高效诊疗。，成立于 2017年
+            project: level3
+          - item:
+            name: bcznk百川智能科技有限公司
+            homepage_url: https://www.baichuan.com
+            logo: 百川智能科技有限公司.svg
+            description: 百川智能科技有限公司是一家专注于通用人工智能大模型及其医疗垂直应用的创新企业，成立于2019年。公司以大模型为基础，深度融合医学知识库，致力于为医疗行业提供智能决策基础设施。，成立于 2019年
+            project: level5
+          - item:
+            name: srylk深睿医疗科技有限公司
+            homepage_url: https://www.deepwise.com/
+            logo: 深睿医疗科技有限公司.svg
+            description: 深睿医疗科技有限公司是一家以AI为核心驱动力的医疗科技企业，成立于2019年。公司专注于医疗影像智能分析和多模态数据整合，致力于为医疗机构提供全生命周期的智慧医疗解决方案。，成立于 2019年
+        - subcategory:
+          name: 智慧交通
+          items:
+          - item:
+            name: lcyxx浪潮云信息技术股份公司
             homepage_url: https://cloud.inspur.com/
             logo: 浪潮云信息技术股份公司logo.svg
-            description: >-
-              科技公司。成立于2015年3月9日。
-         item:
-            name: bjqf北京千方科技股份有限公司
+            description: 科技公司，成立于 2015年3月9日
+          - item:
+            name: bjqfk北京千方科技股份有限公司
             homepage_url: https://www.ctfo.com/newsDetails?id=1922&source=1
             logo: 北京千方科技股份有限公司logo.svg
-            description: >-
-              科技公司。成立于2000年。
-         item:
-            name: bjwj北京万集科技股份有限公司
+            description: 科技公司，成立于 2000年
+          - item:
+            name: mgclx蘑菇车联信息科技有限公司
             homepage_url: https://www.wanji.net.cn/
-            logo: 北京万集科技股份有限公司logo.svg
-            description: >-
-              科技公司。成立于1994年11月2日。
-         item:
+            logo: 蘑菇车联信息科技有限公司logo.svg
+            description: 科技公司，成立于 2017年
+          - item:
             name: bjyhl北京易华录信息技术股份有限公司
             homepage_url: http://ehualu.corp.dav01.com/
             logo: 北京易华录信息技术股份有限公司logo.svg
-            description: >-
-              科技公司。成立于2001年。
-         item:
-            name: jdkj佳都科技集团股份有限公司
+            description: 科技公司，成立于 2001年
+          - item:
+            name: bjwjk北京万集科技股份有限公司
+            homepage_url: https://www.wanji.net.cn/
+            logo: 北京万集科技股份有限公司logo.svg
+            description: 科技公司，成立于 1994年11月2日
+          - item:
+            name: jdkjj佳都科技集团股份有限公司
             homepage_url: https://www.pcitech.com/
             logo: 佳都科技集团股份有限公司logo.svg
-            description: >-
-              科技公司。成立于1992年。
-         item:
-            name: mgcl蘑菇车联信息科技有限公司
-            homepage_url: https://www.wanji.net.cn/
-            logo: 蘑菇车联信息科技有限公司logo.svg
-            description: >-
-              科技公司。成立于2017年。
-     subcategory:
-        name: 智慧医疗
-        items:
-         item:
-            name: ydkj医渡科技有限公司
-            homepage_url: https://www.yidu-tech.com
-            logo: 医渡科技有限公司.svg
-            description: >-
-              专注于基于大数据和人工智能技术的医疗解决方案提供商。成立于2014年。
+            description: 科技公司，成立于 1992
+        - subcategory:
+          name: 智慧城市
+          items:
+          - item:
+            name: bjszz北京数字政通科技股份
+            homepage_url: https://www.egova.com.cn/
+            logo: 北京数字政通科技股份logo.svg
+            description: 科技公司，成立于 2010
+          - item:
+            name: xhxxk星环信息科技股份有限公司
+            homepage_url: https://www.transwarp.cn/
+            logo: 星环信息科技股份有限公司logo.svg
+            description: 科技公司，成立于 2013
+          - item:
+            name: gtxdr国泰新点软件股份有限公司
+            homepage_url: https://www.epoint.com.cn/eweb/
+            logo: 国泰新点软件股份有限公司logo.svg
+            description: 科技公司，成立于 1998
+          - item:
+            name: yckjj云从科技集团股份有限公司
+            homepage_url: https://www.cloudwalk.com/About#intro
+            logo: 云从科技集团股份有限公司logo.svg
+            description: 科技公司，成立于 2015
+          - item:
+            name: szytl深圳云天励飞技术股份有限公司
+            homepage_url: https://www.intellif.com/
+            logo: 深圳云天励飞技术股份有限公司logo.svg
+            description: 科技公司，成立于 2014
+          - item:
+            name: bjhyr北京华宇软件股份有限公司
+            homepage_url: https://www.thunisoft.com/
+            logo: 北京华宇软件股份有限公司logo.svg
+            description: 科技公司，成立于 2001
+        - subcategory:
+          name: 智慧工业
+          items:
+          - item:
+            name: gzsyx广州赛意信息科技股份有限公司
+            homepage_url: http://www.chinasie.com/
+            logo: 赛意信息.svg
+            description: 赛意信息聚焦于工业互联网、智能制造、新一代信息技术等领域的技术与商业模式应用，帮助企业跨越数智化转型挑战，持续提升自身竞争力和创新力。，成立于 2005
             project: level1
-         item:
-            name: xfyl讯飞医疗科技有限公司
-            homepage_url: https://www.iflytek.com
+          - item:
+            name: zkjsg中控技术股份有限公司
+            homepage_url: https://www.supcon.com/
+            logo: 中控.svg
+            description: 中控技术成立于20世纪90年代，是以工业数据为基础、AI大模型为核心、全场景智能体为触手的工业AI平台型公司。，成立于 1999
+            project: level1
+          - item:
+            name: kaswl卡奥斯物联科技股份有限公司
+            homepage_url: https://www.haier.com/haier-ecosystem/cosmoplat/
+            logo: 卡奥斯.svg
+            description: 卡奥斯是海尔智家控股子公司，成立于2017年4月，主营业务涵盖工业互联网平台运营、工业智能研究、智能控制、智能装备和自动化等业务板块。，成立于 2017-04
+            project: level1
+          - item:
+            name: hwy华为云
+            homepage_url: https://www.huaweicloud.com
+            logo: 华为.svg
+            description: 华为云成立于2005年，隶属于华为技术有限公司，专注于云计算中“公有云”领域的技术研究与生态拓展，致力于为用户提供一站式的云计算基础设施服务，是中国国内大型的公有云服务与解决方案提供商之一。，成立于 2005
+            project: level1
+          - item:
+            name: djszg鼎捷数智股份有限公司
+            homepage_url: https://www.digiwin.com/
+            logo: 鼎捷数智.svg
+            description: 在“智能+”战略布局下持续深耕制造、流通两大产业数字化领域，依托AI等新技术，致力于运用数据和智能技术创新生产力，以全面深入的平台化服务助力企业变革运营模式，实践数智化转型。，成立于 2001-12
+            project: level1
+        - subcategory:
+          name: 智慧教育
+          items:
+          - item:
+            name: kdxfj科大讯飞教育
+            homepage_url: https://www.iflytek.com/
             logo: 讯飞.svg
-            description: >-
-              科大讯飞医疗是科大讯飞集团的子公司。成立于1999年。
+            description: 以“人工智能助力教育，因材施教成就梦想”为理念，围绕“因材施教”提供了覆盖教、学、考、评、管的教育全场景解决方案。，成立于 2004年
+            project: level1
+          - item:
+            name: yfd猿辅导
+            homepage_url: https://www.yuanfudao.com
+            logo: 猿辅导.svg
+            description: 猿辅导（Yuanfudao）是一家中国领先的人工智能驱动的在线教育科技公司，成立于2012年，总部位于北京。​公司致力于将人工智能技术应用于教育领域，提供个性化、智能化的学习体验。，成立于 2012年
             project: level2
-         item:
-            name: skkj数坤科技有限公司
-            homepage_url: https://www.shukun.com
-            logo: 树坤.svg
-            description: >-
-              数坤科技作为中国AI医疗影像领域的先锋企业，以其创新的技术和产品，为医生和患者提供了高效、精准的智能诊疗解决方案。成立于2017年。
-            project: level3
-         item:
-            name: bczn百川智能科技有限公司
-            homepage_url: https://www.baichuan.com
-            logo: 百川.svg
-            description: >-
-              百川智能是一家由中国互联网资深人士王小川于2023年4月创立的人工智能大模型公司，专注于研发通用人工智能基础模型及上层应用，现已跻身中国大模型领域第一梯队。‌成立于2019年。
-            project: level5
-         item:
-            name: sryl深睿医疗科技有限公司
-            homepage_url: https://www.deepwise.com/
-            logo: 深睿医疗.svg
-            description: >-
-              深睿致力于通过突破性的人工智能技术及自主研发的核心算法,为国内外医疗服务机构提供人工智能和互联网医疗解决方案。成立于2019年。
+          - item:
+            name: lls流利说
+            homepage_url: https://www.yuanfudao.com
+            logo: 流利说.svg
+            description: 流利说（LAIX）是一家领先的人工智能驱动的教育科技公司，成立于2012年，总部位于中国上海。，成立于 2012年
+          - item:
+            name: ss松鼠AI
+            homepage_url: https://www.vipkid.com.cn/
+            logo: 松鼠AI.svg
+            description: 松鼠AI（Squirrel AI）是一家专注于人工智能教育技术的科技公司，成立于 2013年10月
+          - item:
+            name: VIPKID
+            homepage_url: https://www.vipkid.com.cn/
+            logo: VIPKID.svg
+            description: 以“赋能教育，启迪未来”为使命，致力于实现“让孩子自由的行走于这个星球”的愿景。VIPKID通过结合教育、科技和服务，打造了覆盖全球、满足不同年龄段和地区需求的终身学习产品生态圈。，成立于 2013年10月

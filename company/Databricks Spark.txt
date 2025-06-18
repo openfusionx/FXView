@@ -1,0 +1,8 @@
+名称: Databricks 
+描述: Databricks，由美国加州大学伯克利 AMP 实验室的 Spark 大数据处理系统多位创始人联合创立。Databricks 致力于提供基于 Spark 的云服务，可用于数据集成，数据管道等任务。
+成立时间:2013
+官网网站：https://www.databricks.com
+一级分类：基础设施层
+二级分类：开发运营框架
+展示大小：大
+展示优先级：1
