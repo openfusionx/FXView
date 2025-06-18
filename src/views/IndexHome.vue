@@ -276,6 +276,8 @@ const handleDownloadPdf = () => {
 .container-content {
   width: 100%;
   padding: 20px;
+  height: 86%;
+  overflow-y: scroll;
 }
 .container-content-box {
   margin-bottom: 20px;

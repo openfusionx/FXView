@@ -566,8 +566,6 @@ landscape:
       description: 在“智能+”战略布局下持续深耕制造、流通两大产业数字化领域，依托AI等新技术，致力于运用数据和智能技术创新生产力，以全面深入的平台化服务助力企业变革运营模式，实践数智化转型。，成立于
         2001-12
       project: level1
-- name: Application应用层
-  subcategories:
   - name: 智慧交通
     items:
     - name: lcyxx浪潮云信息技术股份公司
