@@ -1,5 +1,5 @@
 landscape:
-  - name: Service服务层
+  - name: 服务层
     subcategories:
       - name: 智能机器人无人机
         items:
@@ -631,6 +631,18 @@ landscape:
               达观数据是一家专注于智能文本处理技术的企业，为企业提供各类场景智能文本处理产品 [43]。是行业首家国家级专精特新“小巨人”企业。，成立于
               2015-05-28
             founded_year: "2015-05-28"
+          - name: 百度在线网络技术 (北京) 有限公司
+            homepage_url: https://www.baidu.com
+            logo: 百度.svg
+            description: 科技公司，成立于 2000-01-18
+            founded_year: "2000-01-18"
+            project: level1
+          - name: bryck百融云创科技股份有限公司
+            homepage_url: www.brgroup.com
+            logo: 百融.svg
+            description: 科技公司，成立于 2014-03-19
+            founded_year: "2014-03-19"
+            project: level3
       - name: 智慧医疗
         items:
           - name: ydkjy医渡科技有限公司
@@ -776,20 +788,7 @@ landscape:
             logo: 北京华宇软件股份有限公司logo.svg
             description: 科技公司，成立于 2001
             founded_year: "2001"
-      - name: 智慧金融
-        items:
-          - name: 百度在线网络技术 (北京) 有限公司
-            homepage_url: https://www.baidu.com
-            logo: 百度.svg
-            description: 科技公司，成立于 2000-01-18
-            founded_year: "2000-01-18"
-            project: level1
-          - name: bryck百融云创科技股份有限公司
-            homepage_url: www.brgroup.com
-            logo: 百融.svg
-            description: 科技公司，成立于 2014-03-19
-            founded_year: "2014-03-19"
-            project: level3
+          
       - name: 智慧教育
         items:
           - name: kdxfj科大讯飞教育

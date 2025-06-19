@@ -248,7 +248,7 @@ const handleDownloadPdf = () => {
 .container-title {
   width: 100%;
   height: 80px;
-  flex-shrink: 0;
+  background: rgba(255,255,255,0.5);
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
   font-family: "PingFang HK";
   font-size: 20px;
@@ -278,12 +278,12 @@ const handleDownloadPdf = () => {
 }
 .container-content {
   width: 100%;
-  padding: 70px 20px;
+  padding: 20px 20px;
   flex-grow: 1;
   overflow-y: auto;
 }
 .container-content-box {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .img-box {
   position: absolute;
@@ -393,7 +393,7 @@ const handleDownloadPdf = () => {
   height: 80px;
   width: 100%;
   padding: 0 20px;
-  background: #f7f8fa;
+  background: rgba(247, 248, 250, 0.8);
   box-shadow: 4px 0px 8px 0px rgba(0, 0, 0, 0.05);
   position: fixed;
   left: 0;

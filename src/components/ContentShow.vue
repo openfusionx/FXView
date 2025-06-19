@@ -143,8 +143,7 @@ defineExpose({
 <style scoped>
 .container-content-box-title {
   width: 100%;
-  height: 60px;
-  flex-shrink: 0;
+  height: 40px;
   padding-left: 40px;
   display: flex;
   align-items: center;
@@ -158,14 +157,14 @@ defineExpose({
   letter-spacing: 2px;
 }
 .container-content-box-show {
-  padding: 20px;
+  padding: 0 5px 5px 5px;
   min-height: 200px;
   display: flex;
   flex-wrap: wrap;
 }
 .container-content-box-show-item {
   margin-right: 0.3%;
-  margin-top: 10px;
+  margin-top: 5px;
   width: 19.7%;
   box-sizing: border-box;
 }
@@ -202,8 +201,7 @@ defineExpose({
   position: relative;
 }
 .img-show {
-  padding: 10px;
-  height: 40px;
+  padding: 3px;
   width: auto;
 }
 .img-show:hover {
