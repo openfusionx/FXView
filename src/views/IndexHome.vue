@@ -1,169 +1,168 @@
 <template>
-  <FitScreen mode="full" :height="1080" :width="1920">
-    <div class="container">
-      <div class="container-title">
-        <span>AI行业生态全景图</span>
-        <div class="container-search">
-          <el-input
-            v-model="inputValue"
-            style="width: 200px,height: 36px,color: #333333"
-            size="large"
-            placeholder="搜索"
-            :suffix-icon="Search"
-            @change="handleSearch"
-          />
-        </div>
-      </div>
-      <div class="container-content">
-        <div
-          class="container-content-box"
-          v-for="(item, index) in landscapeData"
-          :key="index"
-        >
-          <ContentShow
-            :showData="item"
-            :listIndex="index"
-            :searchData="searchData"
-            @handleClick="handleClick"
-            ref="contentShowRef"
-          />
-        </div>
-      </div>
-      <div class="footer">
-        <div class="footer-left">
-          <div class="down-pdf footer-box" @click="handleDownloadPdf">
-            下载pdf
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                d="M10 2.5V12.5"
-                stroke="black"
-                stroke-width="2"
-                class="feedback-path"
-              />
-              <path
-                d="M5 8.75L10 12.5L14.375 8.75"
-                stroke="black"
-                stroke-width="2"
-                class="feedback-path"
-              />
-              <path
-                d="M3.75 17.5H16.25"
-                stroke="black"
-                stroke-width="2"
-                class="feedback-path"
-              />
-            </svg>
-          </div>
-          <div class="feedback footer-box" @click="handleFeedback">
-            我要反馈
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                d="M12 15L17 15"
-                stroke="black"
-                stroke-width="2"
-                class="feedback-path"
-              />
-              <path
-                d="M11.7143 3.82143C12.7202 2.81548 14.3512 2.81548 15.3571 3.82143V3.82143C16.3631 4.82738 16.3631 6.45834 15.3571 7.46429L7.8058 15.0156L3.82142 15.3571L4.16294 11.3728L11.7143 3.82143Z"
-                stroke="black"
-                stroke-width="2"
-                class="feedback-path"
-              />
-              <path
-                d="M8.9823 7.76794L12.018 10.8037"
-                stroke="black"
-                stroke-width="2"
-                class="feedback-path"
-              />
-            </svg>
-          </div>
-        </div>
-        <div class="footer-right">
-          <LogoSvg />
-          <div class="footer-logo-show" @click="handleClickGitHub">
-            <img src="@/assets/public/git-hub-logo.png" />
-          </div>
-        </div>
+  <div class="container">
+    <div class="container-title">
+      <span>AI行业生态全景图</span>
+      <div class="container-search">
+        <el-input
+          v-model="inputValue"
+          style="width: 200px,height: 36px,color: #333333"
+          size="large"
+          placeholder="搜索"
+          :suffix-icon="Search"
+          @change="handleSearch"
+        />
       </div>
     </div>
-    <teleport to="body">
+    <div class="container-content">
       <div
-        class="img-detail"
-        v-if="isShowDialog"
-        :style="{ top: dialogTop + 'px', left: dialogLeft + 'px' }"
+        class="container-content-box"
+        v-for="(item, index) in landscapeData"
+        :key="index"
       >
-        <div class="img-detail-title">
-          <img
-            class="img-detail-title-img"
-            :src="require(`@/assets/logos/${showDetailInfo?.logo}`)"
-          />
+        <ContentShow
+          :showData="item"
+          :listIndex="index"
+          :searchData="searchData"
+          @handleClick="handleClick"
+          ref="contentShowRef"
+        />
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-left">
+        <div class="down-pdf footer-box" @click="handleDownloadPdf">
+          下载pdf
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
             fill="none"
-            class="img-close"
-            @click="handleClose"
           >
             <path
-              d="M7.63635 7.63635L20.3636 20.3636"
-              stroke="#666666"
+              d="M10 2.5V12.5"
+              stroke="black"
               stroke-width="2"
+              class="feedback-path"
             />
             <path
-              d="M20.3636 7.63635L7.63635 20.3636"
-              stroke="#666666"
+              d="M5 8.75L10 12.5L14.375 8.75"
+              stroke="black"
               stroke-width="2"
+              class="feedback-path"
+            />
+            <path
+              d="M3.75 17.5H16.25"
+              stroke="black"
+              stroke-width="2"
+              class="feedback-path"
             />
           </svg>
         </div>
-        <div class="img-detail-title-text">
-          {{ showDetailInfo?.name }}
-        </div>
-        <div class="img-detail-title-country">中国</div>
-        <div class="img-detail-title-desc">
-          {{ showDetailInfo?.description }}
-        </div>
-        <div class="img-detail-bottom-desc">
-          <div class="img-detail-bottom-desc-one">
-            创立于<span class="img-detail-bottom-desc-span">{{
-              handleTime(showDetailInfo?.founded_year)
-            }}</span>
-          </div>
-          <div class="img-detail-bottom-desc-one">
-            文本展示<span class="img-detail-bottom-desc-span">xxx</span>
-          </div>
-          <div class="img-detail-bottom-desc-web" @click="pathStamp">
-            <span class="web-text">网站</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path d="M15 9L14.9998 5H10.9998" stroke="black" />
-              <path d="M15.091 5L11.2046 8.88642" stroke="black" />
-              <path d="M8.33333 5H5V15H15V11.6667" stroke="black" />
-            </svg>
-          </div>
+        <div class="feedback footer-box" @click="handleFeedback">
+          我要反馈
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M12 15L17 15"
+              stroke="black"
+              stroke-width="2"
+              class="feedback-path"
+            />
+            <path
+              d="M11.7143 3.82143C12.7202 2.81548 14.3512 2.81548 15.3571 3.82143V3.82143C16.3631 4.82738 16.3631 6.45834 15.3571 7.46429L7.8058 15.0156L3.82142 15.3571L4.16294 11.3728L11.7143 3.82143Z"
+              stroke="black"
+              stroke-width="2"
+              class="feedback-path"
+            />
+            <path
+              d="M8.9823 7.76794L12.018 10.8037"
+              stroke="black"
+              stroke-width="2"
+              class="feedback-path"
+            />
+          </svg>
         </div>
       </div>
-    </teleport>
-  </FitScreen>
+      <div class="footer-right">
+        <LogoSvg />
+        <div class="footer-logo-show" @click="handleClickGitHub">
+          <img src="@/assets/public/git-hub-logo.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <teleport to="body">
+    <div class="img-box" v-if="isShowDialog"></div>
+    <div
+      class="img-detail"
+      v-if="isShowDialog"
+      :style="{ top: dialogTop + 'px', left: dialogLeft + 'px' }"
+    >
+      <div class="img-detail-title">
+        <img
+          class="img-detail-title-img"
+          :src="require(`@/assets/logos/${showDetailInfo?.logo}`)"
+        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          class="img-close"
+          @click="handleClose"
+        >
+          <path
+            d="M7.63635 7.63635L20.3636 20.3636"
+            stroke="#666666"
+            stroke-width="2"
+          />
+          <path
+            d="M20.3636 7.63635L7.63635 20.3636"
+            stroke="#666666"
+            stroke-width="2"
+          />
+        </svg>
+      </div>
+      <div class="img-detail-title-text">
+        {{ showDetailInfo?.name }}
+      </div>
+      <div class="img-detail-title-country">中国</div>
+      <div class="img-detail-title-desc">
+        {{ showDetailInfo?.description }}
+      </div>
+      <div class="img-detail-bottom-desc">
+        <div class="img-detail-bottom-desc-one">
+          创立于<span class="img-detail-bottom-desc-span">{{
+            handleTime(showDetailInfo?.founded_year)
+          }}</span>
+        </div>
+        <div class="img-detail-bottom-desc-one">
+          文本展示<span class="img-detail-bottom-desc-span">xxx</span>
+        </div>
+        <div class="img-detail-bottom-desc-web" @click="pathStamp">
+          <span class="web-text">网站</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path d="M15 9L14.9998 5H10.9998" stroke="black" />
+            <path d="M15.091 5L11.2046 8.88642" stroke="black" />
+            <path d="M8.33333 5H5V15H15V11.6667" stroke="black" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </teleport>
 </template>
 <script setup>
 import { ref, onMounted, computed } from "vue";
@@ -231,7 +230,9 @@ const handleDownloadPdf = () => {
 <style scoped>
 .container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
 }
 .firm-log {
@@ -277,12 +278,21 @@ const handleDownloadPdf = () => {
 }
 .container-content {
   width: 100%;
-  padding: 20px;
-  height: 86%;
-  overflow-y: scroll;
+  padding: 70px 20px;
+  flex-grow: 1;
+  overflow-y: auto;
 }
 .container-content-box {
   margin-bottom: 20px;
+}
+.img-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  top: 0;
+  left: 0;
 }
 .img-detail {
   width: 340px;

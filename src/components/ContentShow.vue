@@ -164,9 +164,9 @@ defineExpose({
   flex-wrap: wrap;
 }
 .container-content-box-show-item {
-  margin-right: 6px;
+  margin-right: 0.3%;
   margin-top: 10px;
-  width: 362px;
+  width: 19.7%;
   box-sizing: border-box;
 }
 .container-content-box-show-item-last {
