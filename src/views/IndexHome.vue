@@ -140,7 +140,7 @@
         <div class="img-detail-bottom-desc">
           <div class="img-detail-bottom-desc-one">
             创立于<span class="img-detail-bottom-desc-span">{{
-              showDetailInfo?.founded_year
+              handleTime(showDetailInfo?.founded_year)
             }}</span>
           </div>
           <div class="img-detail-bottom-desc-one">
@@ -201,8 +201,10 @@ const handleSearch = () => {
     });
   });
 };
-const handleTime = () => {
-  return showDetailInfo.value?.description?.split(" ")?.[1]?.split("-")?.[0];
+const handleTime = (dateStr) => {
+  const match = dateStr.match(/(\d{4})/);
+  const year = match ? match[1] : "-";
+  return year;
 };
 const handleClick = (props, it, clientY, clientX) => {
   isShowDialog.value = props;
@@ -298,9 +300,9 @@ const handleDownloadPdf = () => {
   justify-content: space-between;
 }
 .img-detail-title-img {
-  width: 120px;
+  max-width: 240px;
   height: 40px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .img-detail-title-text {
   margin-top: 20px;

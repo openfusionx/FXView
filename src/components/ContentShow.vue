@@ -37,11 +37,7 @@
                 : false,
           }"
         >
-          <img
-            :src="require(`@/assets/logos/${it.logo}`)"
-            class="img-item"
-            :ref="(el) => setImgRef(el, index, ind)"
-          />
+          <img :src="require(`@/assets/logos/${it.logo}`)" class="img-item" />
         </div>
       </div>
     </div>
@@ -77,8 +73,8 @@ const props = defineProps({
     default: () => [],
   },
 });
-const bgTitleColor = ["#FE8FB9", "#A6BBE6", "#A6E6DB", "#AEA6E6"];
-const bgContentColor = ["#FFF0F6", "#E2E8F3", "#EAF4F2", "#F6F5FF"];
+const bgTitleColor = ["#FFA6C8", "#B8CFFF", "#A6E6DB", "#AEA6E6"];
+const bgContentColor = ["#FFF0F6", "#E9F1FF", "#EAF4F2", "#F6F5FF"];
 const emit = defineEmits(["handleClick"]);
 const showCompanyInfo = (it, event) => {
   isShowDialog.value = true;
@@ -107,14 +103,6 @@ const showCompanyInfo = (it, event) => {
     dialogTop.value,
     dialogLeft.value
   );
-};
-const setImgRef = (el, categoryIndex, ind) => {
-  if (!imgRefs.value[categoryIndex]) {
-    imgRefs.value[categoryIndex] = [];
-  }
-  if (el) {
-    imgRefs.value[categoryIndex][ind] = el;
-  }
 };
 const resizeImages = () => {
   imgRefs.value.forEach((it) => {
@@ -149,8 +137,7 @@ watch(
   }
 );
 defineExpose({
-  showDetailInfo,
-  isShowDialog,
+  showCompanyInfo,
 });
 </script>
 <style scoped>
@@ -188,7 +175,7 @@ defineExpose({
 .container-content-box-show-item-title {
   height: 40px;
   flex-shrink: 0;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 2px;
   background: #fff;
   color: #000;
   font-family: "PingFang HK";
@@ -202,22 +189,22 @@ defineExpose({
   justify-content: center;
 }
 .container-content-box-show-item-content {
-  padding: 20px;
+  height: 210px;
+  padding: 10px;
+  flex-shrink: 0;
   background: #fff;
-  min-height: 164px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 48px);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  overflow: hidden;
   position: relative;
 }
 .img-show {
-  width: 80px;
-  height: 48px;
   padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 40px;
+  width: auto;
 }
 .img-show:hover {
   cursor: pointer;
@@ -226,10 +213,13 @@ defineExpose({
   background: #fff;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
 }
+.img-item {
+  height: 20px;
+  object-fit: contain;
+}
 .search-img {
   border-radius: 4px;
   border: 1px solid #d91b64;
   background: #fff;
-  box-shadow: 0px 4px 8px 0px #d91b64;
 }
 </style>
