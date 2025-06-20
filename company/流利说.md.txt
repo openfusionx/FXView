@@ -4,5 +4,5 @@
 官网网站：https://www.yuanfudao.com
 一级分类：Application应用层
 二级分类：智慧教育
-展示大小：小
+展示大小：大
 展示优先级：3
