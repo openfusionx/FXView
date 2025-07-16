@@ -1,0 +1,8 @@
+名称: 测试
+描述: FusionX is a company focused on AI...
+成立时间: 2023
+官网网站: https://www.fusionxu.com/
+一级分类: 应用层
+二级分类: AI平台
+展示大小: 大
+展示优先级: 1
