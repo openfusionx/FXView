@@ -276,7 +276,7 @@ def main():
         {
             "file_path": "build/assets/index-*.js",
             "find": r'CNCF interactive landscapes generator',
-            "replace": 'FXView'
+            "replace": 'openFusionX'
         },
         {
             "file_path": "build/assets/index-*.js",
@@ -287,6 +287,11 @@ def main():
             "file_path": "build/assets/index-*.js",
             "find": r'Ij=S\(\'<svg stroke=currentColor fill=currentColor',
             "replace": 'Ij=S(\'<svg stroke=black fill=black'
+        },
+        {
+            "file_path": "build/index.html",
+            "find": r'"header":\{"links":\{"github":"https://github\.com/openfusionx/FXView"\}',
+            "replace": '"header":{"links":{}'
         }
     ]
     log_step("执行预定义的文本替换任务")
